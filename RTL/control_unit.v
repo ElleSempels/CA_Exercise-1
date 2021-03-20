@@ -22,9 +22,12 @@ module control_unit(
    parameter integer LOAD_WORD  = 6'h23;
    parameter integer STORE_WORD = 6'h2B;
 
-   parameter [1:0] ADD_OPCODE     = 2'd0;
-   parameter [1:0] SUB_OPCODE     = 2'd1;
-   parameter [1:0] R_TYPE_OPCODE  = 2'd2;
+   parameter [2:0] ADD_OPCODE     = 3'd0; //we hebben dit van 2 naar 3 veranderd en dit geldt ook voor sub en r 
+   parameter [2:0] SUB_OPCODE     = 3'd1;
+   parameter [2:0] R_TYPE_OPCODE  = 3'd2;
+   parameter [2:0] S_TYPE_OPCODE  = 3'd3;  // nieuw
+   parameter [2:0] I_TYPE_OPCODE  = 3'd4;  //nieuw
+
   
 
 
@@ -46,6 +49,67 @@ module control_unit(
          end
     
 	// Declare the control signals for each one of the instructions
+       
+       ADDI:begin //vanaf hier tot aan DEFAULT is allemaal nieuw 
+	    reg_dst   = 1'b1;
+            alu_src   = 1'b0;
+            mem_2_reg = 1'b0;
+            reg_write = 1'b1;
+            mem_read  = 1'b0;
+            mem_write = 1'b0;
+            branch    = 1'b0;
+            alu_op    = R_TYPE_OPCODE;
+            jump      = 1'b0;
+	end
+
+	BRANCH_EQ:begin
+	    reg_dst   = 1'b0;
+            alu_src   = 1'b0;
+            mem_2_reg = 1'b0;
+            reg_write = 1'b0;
+            mem_read  = 1'b0;
+            mem_write = 1'b0;
+            branch    = 1'b1;
+            alu_op    = R_TYPE_OPCODE;
+            jump      = 1'b0;
+	end
+
+        JUMP:begin
+	    reg_dst   = 1'b1;
+            alu_src   = 1'b0;
+            mem_2_reg = 1'b0;
+            reg_write = 1'b1;
+            mem_read  = 1'b0;
+            mem_write = 1'b0;
+            branch    = 1'b0;
+            alu_op    = R_TYPE_OPCODE;
+            jump      = 1'b0;
+	end
+	    
+	LOAD_WORD:begin
+	    reg_dst   = 1'b1;
+            alu_src   = 1'b1;
+            mem_2_reg = 1'b1;
+            reg_write = 1'b1;
+            mem_read  = 1'b1;
+            mem_write = 1'b0;
+            branch    = 1'b0;
+            alu_op    = I_TYPE_OPCODE;
+            jump      = 1'b0;
+	end
+
+	STORE_WORD:begin
+	    reg_dst   = 1'b0;
+            alu_src   = 1'b1;
+            mem_2_reg = 1'b0;
+            reg_write = 1'b0;
+            mem_read  = 1'b0;
+            mem_write = 1'b1;
+            branch    = 1'b0;
+            alu_op    = S_TYPE_OPCODE;
+            jump      = 1'b0;
+	end
+
 	
          default:begin
             reg_dst   = 1'b0; 
@@ -62,6 +126,5 @@ module control_unit(
    end
 
 endmodule
-
 
 

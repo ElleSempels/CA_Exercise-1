@@ -1,0 +1,1 @@
+s1(20Mar2021:17:35:39):  ncverilog +sv -f files_verilog.f +nc64bit +nctimescale+1ns/10ps +access+rwc -ALLOWREDEFINITION -linedebug +gui 

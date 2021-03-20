@@ -1,0 +1,13 @@
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/alu.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/alu_control.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/branch_unit.v
+1616257722 /users/students/r0693086/Documents/CA_Exercise-1/RTL/control_unit.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/cpu.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/mux_2.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/pc.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/reg_arstn.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/reg_arstn_en.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/register_file.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/sram.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/cpu_tb.v
+1616249651 /users/students/r0693086/Documents/CA_Exercise-1/RTL/saed32sram_mod.v

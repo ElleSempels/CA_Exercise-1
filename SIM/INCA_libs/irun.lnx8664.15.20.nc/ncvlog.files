@@ -1,0 +1,17 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/alu.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/alu_control.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/branch_unit.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/control_unit.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/cpu.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/mux_2.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/pc.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/reg_arstn.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/reg_arstn_en.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/register_file.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/sram.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/cpu_tb.v
+/users/students/r0693086/Documents/CA_Exercise-1/RTL/saed32sram_mod.v
